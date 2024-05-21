@@ -53,3 +53,23 @@ class RandomForestMLflow:
             ],
             remainder="passthrough",
         )
+
+    def train_model(self):
+        self.model = RandomForestClassifier()
+        self.model.fit(self.preprocessor.fit_transform(self.X_train), self.y_train)
+
+    def evaluate_model(self):
+        self.y_pred = self.model.predict(self.preprocessor.transform(self.X_test))
+        self.accuracy = accuracy_score(self.y_test, self.y_pred)
+
+    def mlflow_run(self):
+        with mlflow.start_run():
+            # Log model parameters
+            mlflow.log_param("n_estimators", self.model.n_estimators)
+            mlflow.log_param("max_depth", self.model.max_depth)
+
+            # Log metrics
+            mlflow.log_metric("accuracy", self.accuracy)
+
+            # Log model
+            mlflow.sklearn.log_model(self.model, "model")
