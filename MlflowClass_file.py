@@ -63,7 +63,7 @@ class RandomForestMLflow:
         self.accuracy = accuracy_score(self.y_test, self.y_pred)
 
     def mlflow_run(self):
-        with mlflow.start_run():
+        with mlflow.start_run() as run:
             # Log model parameters
             mlflow.log_param("n_estimators", self.model.n_estimators)
             mlflow.log_param("max_depth", self.model.max_depth)
@@ -73,3 +73,9 @@ class RandomForestMLflow:
 
             # Log model
             mlflow.sklearn.log_model(self.model, "model")
+
+            # Register model
+            mlflow.register_model(
+                "runs:/{run_id}/model".format(run_id=run.info.run_id),
+                "RandomForestModel",
+            )
