@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1716294881346
+current_stage: None
+description: null
+last_updated_timestamp: 1716294881346
+name: RandomForestModel
+run_id: 15ac68fd710049adbcb9974cf355933c
+run_link: null
+source: file:///home/nelzon/projects/mlflow-refactor/mlruns/0/15ac68fd710049adbcb9974cf355933c/artifacts/model
+status: READY
+status_message: null
+storage_location: file:///home/nelzon/projects/mlflow-refactor/mlruns/0/15ac68fd710049adbcb9974cf355933c/artifacts/model
+user_id: null
+version: 1
