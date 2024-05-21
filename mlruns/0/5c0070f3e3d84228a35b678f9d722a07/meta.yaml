@@ -1,0 +1,15 @@
+artifact_uri: file:///home/nelzon/projects/mlflow-refactor/mlruns/0/5c0070f3e3d84228a35b678f9d722a07/artifacts
+end_time: 1716286672877
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 5c0070f3e3d84228a35b678f9d722a07
+run_name: gaudy-shark-590
+run_uuid: 5c0070f3e3d84228a35b678f9d722a07
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1716286671806
+status: 3
+tags: []
+user_id: nelzon
